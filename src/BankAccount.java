@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Tanya Kalianda
+ * Bank Account
+ */
 public class BankAccount 
 {
 	private String name;
@@ -8,16 +12,35 @@ public class BankAccount
 	private double balance; 
 	
 	
-	public BankAccount(String n, int a)
+	public BankAccount(String accountHolder, int accountNumber)
 	{
-		name = n;
-		accNum = a;
+		name = accountHolder;
+		accNum = accountNumber;
 		balance = 0;
 	}
 	
-	public BankAccount(String name, accNum)
+	public BankAccount(String accountHolder, int accountNumber, double b)
 	{
-		
+		name = accountHolder;
+		accNum = accountNumber;
+		balance = b;
 	}
 
+	
+	public void deposit(double amount)
+	{
+		balance = balance + amount;
+	}
+	public void withdrawal(double amount)
+	{
+		balance = balance - amount;
+	}
+	public double getBalance()
+	{
+		return balance;
+	}
+	public String toString()
+	{
+		return "balance: " + balance;
+	}
 }
