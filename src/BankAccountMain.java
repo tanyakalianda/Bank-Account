@@ -5,12 +5,14 @@
  */
 public class BankAccountMain
 {
-	private static String Tanya;
 	
 	public static void main(String[] args) 
 	{
-	BankAccount account1 = new BankAccount(Tanya, 548385, 0);
+	BankAccount account1 = new BankAccount("Tanya", 548385);
 	System.out.println(account1.getBalance());
+	
+	BankAccount account2 = new BankAccount("Tanya", 548385, 250);
+	System.out.println(account2.getBalance());
 	
 	account1.deposit(500);
 	account1.withdrawal(25);

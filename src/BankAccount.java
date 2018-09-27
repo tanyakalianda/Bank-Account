@@ -29,11 +29,11 @@ public class BankAccount
 	
 	public void deposit(double amount)
 	{
-		balance = balance + amount;
+		balance = balance + amount; //balance += amount;
 	}
 	public void withdrawal(double amount)
 	{
-		balance = balance - amount;
+		balance = balance - amount; //balance -= amount;
 	}
 	public double getBalance()
 	{
@@ -41,6 +41,12 @@ public class BankAccount
 	}
 	public String toString()
 	{
-		return "balance: " + balance;
+		return "Name: " + name + " Account Number: " + accNum + " Balance: " + balance;
+		//return "/taccNum " -> /t is a tab (instead of leaving space b/w code + quotation mark)
+		//return name;
+		//return balance; 
+		//return  accNum; -> this does't work b/c method ends after return -> only returns name
+		//must return all on one string for all the fields to show up
+	
 	}
 }
